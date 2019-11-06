@@ -14,7 +14,7 @@ env:
 knativeDeploy: false
 
 service:
-  name: spring
+  name: hello-world-spring-boot
   type: ClusterIP
   externalPort: 80
   internalPort: 8080
