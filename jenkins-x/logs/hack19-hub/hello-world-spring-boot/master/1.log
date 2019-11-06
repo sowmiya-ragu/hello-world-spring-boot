@@ -1,0 +1,81 @@
+
+Showing logs for build [32mhack19-hub-hello-world-spring-b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-jmbkd[0m
+{"level":"warn","ts":1573021269.718574,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1573021269.7190218,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mhack19-hub-hello-world-spring-b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-d7z2p[0m
+{"level":"warn","ts":1573021270.793733,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1573021270.7949054,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mhack19-hub-hello-world-spring-b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mhack19-hub-hello-world-spring-b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-hack19-hub-hello-world-spring-b-mwkj4[0m
+{"level":"warn","ts":1573021277.8066754,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1573021278.2312262,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**********/hello-world-spring-boot.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mhack19-hub-hello-world-spring-b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:cbdcfee405b466d21117291b2aa2af615c474c6a
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mhack19-hub-hello-world-spring-b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mhack19-hub-hello-world-spring-b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.example:myproject >------------------------
+[INFO] Building myproject 0.0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ myproject ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ myproject ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /workspace/source/src/main/resources
+[INFO] skip non existing resourceDirectory /workspace/source/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ myproject ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /workspace/source/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ myproject ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /workspace/source/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ myproject ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ myproject ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.5:jar (default-jar) @ myproject ---
+[INFO] Building jar: /workspace/source/target/myproject-0.0.1.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.3.1.RELEASE:repackage (default) @ myproject ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ myproject ---
+[INFO] Installing /workspace/source/target/myproject-0.0.1.jar to /root/.mvnrepository/com/example/myproject/0.0.1/myproject-0.0.1.jar
+[INFO] Installing /workspace/source/pom.xml to /root/.mvnrepository/com/example/myproject/0.0.1/myproject-0.0.1.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ myproject ---
+[INFO] Using alternate deployment repository nexus::default::http://nexus/repository/maven-releases/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  19.999 s
+[INFO] Finished at: 2019-11-06T06:21:40Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32mhack19-hub-hello-world-spring-b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+v0.38.0
+
+Showing logs for build [32mhack19-hub-hello-world-spring-b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image java                  
+[36mINFO[0m[0000] Error while retrieving image from cache: getting file info: stat /workspace/sha256:c1ff613e8ba25833d2e1940da0940c3824f03f802c449f3d1815a66b7f8c0e9d: no such file or directory 
+[36mINFO[0m[0000] Downloading base image java                  
+[36mINFO[0m[0001] Executing 0 build triggers                   
+error building image: error building stage: lstat /workspace/source/target/myproject-0.0.1-SNAPSHOT.jar: no such file or directory
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
