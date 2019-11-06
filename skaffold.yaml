@@ -2,7 +2,7 @@ apiVersion: skaffold/v1beta2
 kind: Config
 build:
   artifacts:
-  - image: hack19-hub/spring
+  - image: hack19-hub/hello-world-spring-boot
     context: .
     docker: {}
   tagPolicy:
@@ -21,8 +21,8 @@ profiles:
   deploy:
     helm:
       releases:
-      - name: spring
-        chartPath: charts/spring
+      - name: hello-world-spring-boot
+        chartPath: charts/hello-world-spring-boot
         setValueTemplates:
           image.repository: '{{.DOCKER_REGISTRY}}/{{.IMAGE_NAME}}'
           image.tag: '{{.DIGEST_HEX}}'
